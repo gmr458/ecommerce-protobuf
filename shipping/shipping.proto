@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package shipping;
+
+option go_package = "github.com/gmr458/ecommerce-protobuf/codegen/golang/shipping";
+
+message CreateShippingRequest {
+  string address = 1;
+}
+
+message CreateShippingResponse {}
+
+service Payment {
+  rpc Create(CreateShippingRequest) returns (CreateShippingResponse) {}
+}
